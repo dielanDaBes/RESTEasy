@@ -12,11 +12,13 @@ Configure the parameters for an HTTP/HTTPS request through a browser based UI ho
 2. 3D print and assemble https://www.tinkercad.com/things/0qxXQGSvE9Z?sharecode=hq_qgz9BtA8mJckSX1Y-pCkFWSxI0rSVLPcXG-DfLVY
 3. Use Raspberry Pi imager to flash PI OS Lite to SD card configuring desired hostname, password, ssh, and network settings
 4. Update package manager: sudo apt-get update && sudo apt-get upgrade
-5. Install python3
-6. Install Docker and Docker Compose
-7. Clone Repo
-8. Edit Docker Compose Settings
-9. Docker Compose Up
+5. (Optional) Install/configure Samba for easy network file editing
+7. Install python3
+8. Install Docker and Docker Compose
+9. (Install option 1) Clone Repo (install git)
+10. (Install option 2) Create Docker Compose File
+11. Edit Docker Compose Settings
+12. Docker Compose Up
 
 
 

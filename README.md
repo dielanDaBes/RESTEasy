@@ -12,6 +12,6 @@ Configure the parameters for an HTTP/HTTPS request through a browser based UI ho
 1. Wire Easy Button to Raspberry Pi Zero W 
 2. 3D print and assemble housing https://www.tinkercad.com/things/0qxXQGSvE9Z?sharecode=hq_qgz9BtA8mJckSX1Y-pCkFWSxI0rSVLPcXG-DfLVY
 3. Use Raspberry Pi imager to flash PI OS Lite to SD card configuring desired hostname, password, ssh, and network settings
-4. wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sudo chmod +x setup.sh && ./setup.sh
+4. ```wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sudo chmod +x setup.sh && ./setup.sh```
 5. Edit Docker Compose Settings
 6. Docker Compose Up

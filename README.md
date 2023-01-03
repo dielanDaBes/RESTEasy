@@ -13,7 +13,7 @@ Configure the parameters for an HTTP/HTTPS request through a browser based UI ho
 3. Use Raspberry Pi imager to flash PI OS Lite to SD card configuring desired hostname, password, ssh, and network settings
 4. Update package manager: sudo apt-get update && sudo apt-get upgrade
 5. (Optional) Install/configure Samba for easy network file editing
-7. Install python3
+7. (Optional) Install python3
 8. Install Docker and Docker Compose
 9. (Install option 1) Clone Repo (install git)
 10. (Install option 2) Create Docker Compose File

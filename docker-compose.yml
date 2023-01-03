@@ -1,7 +1,7 @@
 version: "3.7"
 services:
         rest_easy:
-                image: rest_easy:v1
+                image: dmoro407/resteasymain:v1
                 volumes:
                  - static:/static
                 environment:
@@ -18,7 +18,7 @@ services:
                  - 4.4.4.4
                 restart: always
         configure_rest_easy:
-                image: configure_rest_easy:v1
+                image: dmoro407/resteasyconfig:v1
                 ports:
                  - "80:5000" #Change first number to switch the port that config is served on
                 volumes:
@@ -26,7 +26,7 @@ services:
                  - static:/static # You can edit index.html and success.html if you want a custom look
                 restart: always
         blackberrypi: #comment out or remove this service to keep LEDs on
-                image: blackberrypi:v1
+                image: dmoro407/blackberrypi:v1
                 volumes:
                  - /sys/class/leds/led0:/sys/class/leds/led0 #confirmed file path on Rpi zero w
                 restart: always

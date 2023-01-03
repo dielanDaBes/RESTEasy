@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<style>
+#parent {
+    text-align:center;
+    height:400px;
+    width:600px;
+}
+.block {
+    height:100px;
+    width:200px;
+    text-align:left;
+}
+.center {
+    margin:auto;
+}
+.left {
+    margin:auto auto auto 0;
+    background-color:red;
+}
+.right {
+    margin:auto 0 auto auto;
+    background-color:yellow;
+}
+</style>
+</head>
+
+
+<body lang=EN-US style='tab-interval:.5in;word-wrap:break-word'>
+
+<div id=parent class=center>
+<form class="generated-form" name= "easyButtonForm"  method="GET" action="submit"  target="_self">
+<fieldset>
+  <legend> Easy Button Config </legend>
+  <label for="url">URL</label><br>
+  <input type="text" id="url" name="url"><br><br>
+	<label for="method">HTTP Method</label><br>
+	<select name = "method" id= "method">
+		<option value = "GET">GET</option>
+		<option value = "HEAD">HEAD</option>
+		<option value = "POST">POST</option>
+		<option value = "PUT">PUT</option>
+		<option value = "DELETE">DELETE</option>
+		<option value = "CONNECT">CONNECT</option>
+		<option value = "OPTIONS">OPTIONS</option>
+		<option value = "TRACE">TRACE</option>
+		<option value = "PATCH">PATCH</option>
+	</select><br><br>
+  <label for="headers">Headers (JSON)</label><br>
+  <textarea id="headers" name="headers" cols ='40' rows = '10' ></textarea><br><br>
+  <label for="body">Body (JSON)</label><br>
+  <textarea id="body" name="body" cols ='40' rows = '10'></textarea><br>
+  <input type="submit" value="Submit">
+</fieldset>
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+	 $.getJSON("/static/restEasy.conf", function(data){
+            document.getElementById('headers').value = data.headers;
+		document.getElementById('url').value = data.url;
+		document.getElementById('method').value = data.method;
+		document.getElementById('body').value = data.body;
+        }).fail(function(){
+            console.log("An error has occurred.");
+        });
+});
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 # REST Easy
 
 <p align="center">
-  <img width="460" height="300" src="RESTEasy_resize.jpg">
+  <img src="RESTEasy_resize.jpg">
 </p>
 
 # Description

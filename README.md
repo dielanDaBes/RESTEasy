@@ -47,7 +47,7 @@ This is only really needed if you want to edit files using an editor on your com
 
 1. Run 
 ``` sh 
-sudo apt-get install samba samba-common-bin
+yes | sudo apt-get install samba samba-common-bin
 ```
 3. Edit config 
 ``` sh

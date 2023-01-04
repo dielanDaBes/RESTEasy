@@ -5,8 +5,13 @@
 </p>
 
 # Description
-Open Source REST based easy button project for the Raspberry Pi Zero W.
-Configure the parameters for an HTTP/HTTPS request through a browser based UI hosted on the Raspberry Pi Zero W and then send that request by hitting the button.
+Open Source REST based easy button project for the Raspberry Pi Zero W. Great project for hackers/engineers/students or anyone looking to practice a wide variety of toolsets including soldering, assembly, 3D printing, and web development.
+
+Configure the parameters for an HTTP/HTTPS request through a browser based UI hosted on the Raspberry Pi Zero W and then send that request by hitting the button. Config page HTML is external to docker containers, making it easy to overwrite and give your own custom look.
+
+This request could hit something local on your network like a smart switch/socket directly or more easily through a home automation hub like <a href="https://github.com/home-assistant">Home Assistant</a>
+
+The request could also be used to trigger something external to your network like a Zapier/Integromat webhook or custom code in an AWS lambda.
 
 # Future Enhancements
 - Ability to put button in host AP mode to configure wifi settings

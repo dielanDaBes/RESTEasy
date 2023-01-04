@@ -37,3 +37,22 @@ wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sud
 ```
 6. SSH into Pi again change directory into RESTEasy folder and edit Docker Compose Settings (Should really only need to update pin settings if not using default pin 13)
 7. From RESTEasy folder run ```docker compose up -d``` (Run without -d to view console logs)
+
+# Optional Samba Configuration
+This is only really needed if you want to edit files using an editor on your computer like VSCode instead of using nano directly on the pi. It also provides a convenient way of moving files on and off the pi.
+
+1. Run ```sudo apt-get install samba samba-common-bin```
+2. Edit config ```sudo nano /etc/samba/smb.conf```
+3. Add to bottom of file 
+```
+[shared]
+path = /home/pi/RESTEasy
+writeable=Yes
+create mask=0777
+directory mask=0777
+public=no
+```
+4. Create samba user and password```sudo smbpasswd -a ${USER}```
+5. Restart the samba service ```sudo systemctl restart smbd```
+6. You can now access this folder from your computer over //{hostname}/shared (hostname set with raspberry pi imager flash, otherwise you can use the command ```hostname -I```)
+

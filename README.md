@@ -23,6 +23,6 @@ The request could also be used to trigger something external to your network lik
 1. Wire Easy Button to Raspberry Pi Zero W 
 2. 3D print and assemble <a href="https://www.tinkercad.com/things/0qxXQGSvE9Z?sharecode=hq_qgz9BtA8mJckSX1Y-pCkFWSxI0rSVLPcXG-DfLVY">Housing</a>
 4. Use Raspberry Pi imager to flash PI OS Lite to SD card configuring desired hostname, password, ssh, and network settings
-5. ```wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sudo chmod +x setup.sh && ./setup.sh```
+5. SSH into Pi and run ```wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sudo chmod +x setup.sh && ./setup.sh```
 6. Edit Docker Compose Settings (Should really only need to update pin settings if not using default pin 13)
 7. Docker Compose Up

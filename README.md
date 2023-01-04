@@ -35,5 +35,5 @@ The request could also be used to trigger something external to your network lik
 ``` sh
 wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sudo chmod +x setup.sh && ./setup.sh
 ```
-6. Edit Docker Compose Settings (Should really only need to update pin settings if not using default pin 13)
-7. Docker Compose Up
+6. SSH into Pi again change directory into RESTEasy folder and edit Docker Compose Settings (Should really only need to update pin settings if not using default pin 13)
+7. From RESTEasy folder run ```docker compose up```

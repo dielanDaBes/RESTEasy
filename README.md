@@ -10,7 +10,7 @@ Configure the parameters for an HTTP/HTTPS request through a browser based UI ho
 
 # Future Enhancements
 - Ability to put button in host AP mode to configure wifi settings
-- Optional Home Assistant mode that allows drop down selection for devices/automations
+- Optional <a href="https://github.com/home-assistant">Home Assistant</a> mode that allows drop down selection for devices/automations
 - Mobile app for configuration
 
 # Instructions...Work In Progress - Full tutorial coming soon at link TBD

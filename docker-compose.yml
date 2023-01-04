@@ -9,7 +9,7 @@ services:
                  - DEBOUNCE=3 #How long between button presses to ignore- Default 3
                  - STANDARDLOGIC=True #If button input is high when pressed set to true- Default True
                  - ENABLELOGS=False #If you want a log file created with timestamps for each button press set to true- Default False
-                 - BUTTONINPUT= 13 #Choose the input pin used to detect button press (BCM pinout) - Default 13
+                 - BUTTONINPUT= 13 #Choose the input pin from the raspberry pi used to detect button press (BCM pinout) - Default 13
                 devices:
                  - /dev/gpiomem:/dev/gpiomem
                 dns:

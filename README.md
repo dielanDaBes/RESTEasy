@@ -1,5 +1,5 @@
 # RESTEasy
-![Alt text](RESTEasy.jpg?raw=true "RESTEasy")
+![Alt text](RESTEasy_resize.jpg?raw=true "RESTEasy")
 
 # Description
 Open Source REST based easy button project for the Raspberry Pi Zero W.

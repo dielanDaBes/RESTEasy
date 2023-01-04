@@ -41,9 +41,10 @@ wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sud
 # Optional Samba Configuration
 This is only really needed if you want to edit files using an editor on your computer like VSCode instead of using nano directly on the pi. It also provides a convenient way of moving files on and off the pi.
 
-1. Run ``` sh sudo apt-get install samba samba-common-bin```
-2. Edit config ```sudo nano /etc/samba/smb.conf```
-3. Add to bottom of file 
+1. Run ``` sh 
+sudo apt-get install samba samba-common-bin```
+3. Edit config ```sudo nano /etc/samba/smb.conf```
+4. Add to bottom of file 
 ```
 [shared]
 path = /home/pi/RESTEasy

@@ -27,7 +27,7 @@ The request could also be used to trigger something external to your network lik
 6. 2x Threaded Inserts
 7. 2x m3 Screws
 
-# Instructions...Work In Progress - Full tutorial coming soon at link TBD
+# Instructions - Video Coming Soon TBD
 1. Wire Easy Button to Raspberry Pi Zero W 
 2. 3D print and assemble <a href="https://www.tinkercad.com/things/0qxXQGSvE9Z?sharecode=hq_qgz9BtA8mJckSX1Y-pCkFWSxI0rSVLPcXG-DfLVY">Housing</a>
 4. Use Raspberry Pi imager to flash PI OS Lite to SD card configuring desired hostname, password, ssh, and network settings

@@ -18,7 +18,7 @@ The request could also be used to trigger something external to your network lik
 - Optional <a href="https://github.com/home-assistant">Home Assistant</a> mode that allows drop down selection for devices/automations
 - Mobile app for configuration
 
-# Parts List
+# Parts List TBD Add links and full measurements
 1. Easy Button
 2. Raspberry Pi Zero W
 3. Micro SD Card

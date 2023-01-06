@@ -74,4 +74,5 @@ sudo systemctl restart smbd
 ``` sh
 hostname
 ```
+9. Go to http://<hostname>/ and set up your HTTP request you want to send when you press the button!
 

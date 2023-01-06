@@ -41,6 +41,8 @@ wget https://raw.githubusercontent.com/dielanDaBes/RESTEasy/main/setup.sh && sud
 docker compose up -d
 ``` 
 (Run without -d to view console logs)
+8. Go to http://<hostname>/ and set up your HTTP request you want to send when you press the button! 
+  Tip: Hostname was set with the Pi imager, but can be found with ```hostname``` command. If the Pi has an issue resolving the host make sure the first DNS record in the docker compose file is your local DNS. If you still have issues you can use the Pi's IP address which you can get from ```ifconfig```
 
 # Optional Samba Configuration
 This is only really needed if you want to edit files using an editor on your computer like VSCode instead of using nano directly on the pi. It also provides a convenient way of moving files on and off the pi.
@@ -70,9 +72,5 @@ sudo smbpasswd -a ${USER}
 ``` sh
 sudo systemctl restart smbd
 ```
-8. You can now access this folder from your computer over //{hostname}/shared (hostname set with raspberry pi imager flash, otherwise you can use the command:
-``` sh
-hostname
-```
-9. Go to http://<hostname>/ and set up your HTTP request you want to send when you press the button!
+8. You can now access this folder from your computer over //<hostname>/shared
 

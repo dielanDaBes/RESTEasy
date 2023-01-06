@@ -72,6 +72,6 @@ sudo systemctl restart smbd
 ```
 8. You can now access this folder from your computer over //{hostname}/shared (hostname set with raspberry pi imager flash, otherwise you can use the command:
 ``` sh
-hostname -I
+hostname
 ```
 

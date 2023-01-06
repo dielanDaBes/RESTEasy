@@ -3,33 +3,35 @@ services:
         rest_easy:
                 image: dmoro407/resteasymain:v1 #You can edit the source code and build your own local docker image for full customization
                 volumes:
-                 - static:/static #This is where the conf file is stored that holds the HTTP parameters
+                        - static:/static #This is where the conf file is stored that holds the HTTP parameters
                 environment:
-                 - PYTHONUNBUFFERED=1 #This allows you to view logs in terminal when running in attached mode
-                 - DEBOUNCE=3 #How long between button presses to ignore- Default 3
-                 - STANDARDLOGIC=True #If button input is high when pressed set to true- Default True
-                 - ENABLELOGS=False #If you want a log file created with timestamps for each button press set to true- Default False
-                 - BUTTONINPUT= 13 #Choose the input pin from the raspberry pi used to detect button press (BCM pinout) - Default 13
+                        - PYTHONUNBUFFERED=1 #This allows you to view logs in terminal when running in attached mode
+                        - DEBOUNCE=3 #How long between button presses to ignore- Default 3
+                        - STANDARDLOGIC=True #If button input is high when pressed set to true- Default True
+                        - ENABLELOGS=False #If you want a log file created with timestamps for each button press set to true- Default False
+                        - BUTTONINPUT= 13 #Choose the input pin from the raspberry pi used to detect button press (BCM pinout) - Default 13
                 devices:
-                 - /dev/gpiomem:/dev/gpiomem #This allows the container access to GPIO pins on the raspberry pi
+                        - /dev/gpiomem:/dev/gpiomem #This allows the container access to GPIO pins on the raspberry pi
                 dns:
-                 - 192.168.1.1 #replace with your local dns to resolve .local host names
-                 - 8.8.8.8
-                 - 4.4.4.4
+                        - 192.168.1.1 #replace with your local dns to resolve .local host names
+                        - 8.8.8.8
+                        - 4.4.4.4
                 restart: always #This will restart the container on failure or device restart
         configure_rest_easy:
                 image: dmoro407/resteasyconfig:v1 #You can edit the source code and build your own local docker image for full customization
                 ports:
-                 - "80:5000" #Change first number to switch the port that config is served on
+                        - "80:5000" #Change first number to switch the port that config is served on
                 volumes:
-                 - templates:/templates #You can edit index.html and success.html if you want a custom look
-                 - static:/static #This allows the Web UI access to write to the conf file used at button press
+                        - type: bind
+                          source: ./templates #Edit index and success files in templates for custom look
+                          target: /templates
+                        - static:/static #This allows the Web UI access to write to the conf file used at button press
                 restart: always #This will restart the container on failure or device restart
-        blackberrypi: #comment out or remove this service to keep LEDs on
+        blackberrypi:
+                #comment out or remove this service to keep LEDs on
                 image: dmoro407/blackberrypi:v1 #You can edit the source code and build your own local docker image for full customization
                 volumes:
-                 - /sys/class/leds/led0:/sys/class/leds/led0 #confirmed file path on Rpi zero w
+                        - /sys/class/leds/led0:/sys/class/leds/led0 #confirmed file path on Rpi zero w
                 restart: always #This will restart the container on failure or device restart
 volumes:
         static:
-        templates:

@@ -62,7 +62,7 @@ create mask=0777
 directory mask=0777
 public=no
 ```
-4. Create samba user and password
+4. Create a samba password for current user
 ``` sh
 sudo smbpasswd -a ${USER}
 ```
